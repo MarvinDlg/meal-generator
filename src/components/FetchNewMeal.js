@@ -55,8 +55,19 @@ export default class FetchNewMeal extends React.Component {
                         <br />
                         <br /> */}
                         <h2>See The Video:</h2>
-                        <div id="video">
-                        <ReactPlayer url={this.state.meal.strYoutube} />
+                        <div className="video-wrapper">
+                            <ReactPlayer
+                                className="react-player"
+                                url={this.state.meal.strYoutube} 
+                                controls
+                                muted
+                                config={{
+                                    youtube: {
+                                        playersVars: { showInfo: 1 }
+                                    }
+                                }}
+                            
+                            />
                         </div>
                         </div>
                 }
